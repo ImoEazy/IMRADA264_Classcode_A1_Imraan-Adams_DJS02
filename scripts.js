@@ -3,7 +3,9 @@ const result = document.querySelector("[data-result]");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  
   const entries = new FormData(event.target);
+  //concert input values to numbers
   const { dividend, divider } = Object.fromEntries(entries);
   const dividendNum = parseInt(dividend, 10);
   const dividerNum = parseInt(divider, 10);
