@@ -15,6 +15,8 @@ form.addEventListener("submit", (event) => {
 
 
 
+
+
   //clear previous error msg
   //Any previous error messages are cleared from the result display.
   result.classList.remove("error-message");
@@ -33,11 +35,11 @@ form.addEventListener("submit", (event) => {
   result.classList.add("error-message");
   return;
 }
-if (divedenum === (CharacterData)){   
-  result.innerText = "Division not performed. Invalid number provided. Try again.";
- result.classList.add("error-message");
- return;
- }
+//if (divedenum === (CharacterData)){   
+  //result.innerText = "Division not performed. Invalid number provided. Try again.";
+ //result.classList.add("error-message");
+ //return;
+ //}
 
 
 
