@@ -3,11 +3,8 @@ const result = document.querySelector("[data-result]");// gets 'result display e
 
 //event listener for form submit button. runs specified function 
 form.addEventListener("submit", (event) => {
-  
   //prevents default behavior of form submission, which usually refresh page of the form submission
   event.preventDefault();
-  
-
   //FormData is used to collect the input values from the form. The Object.fromEntries method converts the entries into an object, where dividend and divider represent the values from the respective input fields.
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
@@ -17,13 +14,12 @@ form.addEventListener("submit", (event) => {
 
 
 
-  //clear previous error msg
-  //Any previous error messages are cleared from the result display.
-  result.classList.remove("error-message");
-  result.innerText = "";
+
+
+
 
   //validate checks
-  //The code checks if either input is not a valid number (isNaN), or if the divider is zero (to avoid division by zero). In either case, an appropriate error message is displayed.
+  //n by zero). In either case, an appropriate error message is displayed.
   if (isNaN(dividendNum) || isNaN(dividerNum)) { 
   result.innerText = "Division not performed. Both values are required in inputs. Try again";
   result.classList.add("error-message");
@@ -44,7 +40,7 @@ form.addEventListener("submit", (event) => {
 
 
 //perform the dividion
-//If validation passes, the division is performed. Math.floor is used to round down the result to the nearest whole number, which is then displayed in the result element.
+
 const quotient = Math.floor(dividendNum / dividerNum);
 result.innerText = `Result: ${quotient}`;
 
