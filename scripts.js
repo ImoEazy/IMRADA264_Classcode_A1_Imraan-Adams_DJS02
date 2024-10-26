@@ -12,10 +12,8 @@ form.addEventListener("submit", (event) => {
   const entries = new FormData(event.target);
   const { dividend, divider } = Object.fromEntries(entries);
 
-  //convert input values to numbers
-  //The input values are converted from strings to integers using parseInt.
-  const dividendNum = parseInt(dividend, 10);
-  const dividerNum = parseInt(divider, 10);
+
+
 
   //clear previous error msg
   //Any previous error messages are cleared from the result display.
@@ -35,13 +33,14 @@ form.addEventListener("submit", (event) => {
   result.classList.add("error-message");
   return;
 }
-
- if (dividerNum = numeric(Text))  {
-  result.innerText = "Something critical went wrong. Please reload the page";
-  result.classList.add("error-message");
-  return;
-
+if (divedenum === (CharacterData)){   
+  result.innerText = "Division not performed. Invalid number provided. Try again.";
+ result.classList.add("error-message");
+ return;
  }
+
+
+
 //perform the dividion
 //If validation passes, the division is performed. Math.floor is used to round down the result to the nearest whole number, which is then displayed in the result element.
 const quotient = Math.floor(dividendNum / dividerNum);
